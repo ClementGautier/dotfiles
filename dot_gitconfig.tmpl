@@ -1,0 +1,44 @@
+[user]
+	name = Clement Gautier
+	email = "{{ .email }}"
+	signingkey = "{{ .gpgkey }}"
+[core]
+	excludesfile = ~/.gitignore
+[alias]
+	oups            = commit -a --amend -C HEAD
+	br              = branch -v
+	bra             = branch -v -a
+	cat             = cat-file -p
+	cc              = shortlog -sn
+	ci              = commit -v
+	cia             = commit --amend -C HEAD
+	ciaa            = commit -a --amend -C HEAD
+	cim             = commit -m '--'
+	co              = checkout
+	count           = shortlog -sn
+	d               = diff
+	ds              = diff --staged
+	dis             = diff --ignore-all-space
+	last            = log -1 HEAD
+	lg              = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
+	lga             = log --graph --pretty=tformat:'%Cred%h%Creset -%C(cyan)%d %Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --all
+	logfull         = log --pretty=fuller --graph --stat -p
+	rebc            = rebase --continue
+	rebs            = rebase --skip
+	rebt            = rebase --abort
+	st              = status
+	uncommit        = reset --soft HEAD^
+	uncommithard    = reset --hard HEAD^
+	undomerge       = reset --hard ORIG_HEAD
+	unstage         = reset HEAD
+	pick            = cherry-pick
+	picka           = cherry-pick --abort
+	pickc           = cherry-pick --continue
+	file            = show --stat --oneline
+	stream          = push --set-upstream origin
+[help]
+	autocorrect = 1
+[commit]
+	gpgsign = true
+[push]
+	default = current
