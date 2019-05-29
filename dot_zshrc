@@ -50,15 +50,6 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(
-  git
-  kubectl
-  symfony2
-)
-
-source $ZSH/oh-my-zsh.sh
-source /usr/share/google-cloud-sdk/completion.zsh.inc
-
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='vim'
 export ARCHFLAGS="-arch x86_64"
@@ -66,9 +57,18 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:/snap/bin:$PATH
 export KUBECONFIG=$HOME/.kube/config
 
+plugins=(
+  git
+  kubectl
+  symfony2
+)
+
+source $ZSH/oh-my-zsh.sh
+source <(stern --completion=zsh)
+source /usr/share/google-cloud-sdk/completion.zsh.inc
+
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(kubecontext context dir vcs)
-
 PROMPT='$(kube_ps1)'$PROMPT
