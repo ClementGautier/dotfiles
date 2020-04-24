@@ -17,12 +17,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source <(stern --completion=zsh)
 source /usr/share/google-cloud-sdk/completion.zsh.inc
-
-alias zshconfig="code ~/.zshrc"
-alias ohmyzsh="code ~/.oh-my-zsh"
-alias meteo="curl -4 http://wttr.in/Nantes "
-alias gcr-purge-untagged="gcloud container images list-tags eu.gcr.io/substra-208412/${IMAGE} --filter='-tags:*' --format='get(digest)' --limit=unlimited | awk '{print \"eu.gcr.io/substra-208412/${IMAGE}@\" \$1}' | xargs gcloud container images delete --quiet"
-alias gcr-purge-date="gcloud container images list-tags eu.gcr.io/substra-208412/${IMAGE} --filter='timestamp.datetime < ${DATE}' --format='get(digest)' --limit=unlimited | awk '{print \"eu.gcr.io/substra-208412/${IMAGE}@\" \$1}' | xargs gcloud container images delete --force-delete-tags --quiet"
+source ~/.aliases
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(kubecontext context dir vcs)
 
