@@ -7,7 +7,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
 
-alias ls="exa -gF --group-directories-first --git"
+alias ls="ls -F --group-directories-first"
 alias ll="ls -l"
 alias l="ll -a"
 
@@ -22,9 +22,6 @@ alias week='date +%V'
 
 # Display public IP
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
-
-# Display all IPs on all interfaces
-alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
