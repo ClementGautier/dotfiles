@@ -1,0 +1,5 @@
+{{- $email := promptString "email" -}}
+{{- $gpgkey := promptString "gpgkey" -}}
+[data]
+    email = "{{ $email }}"
+    gpgkey = "{{ $gpgkey }}"
