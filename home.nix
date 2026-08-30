@@ -18,6 +18,7 @@
     opencode
     nerd-fonts.hack
     k9s
+    kubectl
   ];
 
   fonts.fontconfig.enable = true;
