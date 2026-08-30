@@ -17,6 +17,7 @@
     herdr
     opencode
     nerd-fonts.hack
+    k9s
   ];
 
   fonts.fontconfig.enable = true;
