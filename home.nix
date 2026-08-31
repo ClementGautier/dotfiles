@@ -20,7 +20,7 @@
     k9s
     kubectl
     fluxcd
-    helm
+    kubernetes-helm
   ];
 
   fonts.fontconfig.enable = true;
