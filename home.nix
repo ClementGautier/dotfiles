@@ -19,6 +19,7 @@
     nerd-fonts.hack
     k9s
     kubectl
+    fluxcd
   ];
 
   fonts.fontconfig.enable = true;
