@@ -21,6 +21,7 @@
     kubectl
     fluxcd
     kubernetes-helm
+    nodejs_26
   ];
 
   fonts.fontconfig.enable = true;
