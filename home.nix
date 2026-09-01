@@ -5,10 +5,10 @@
   home.homeDirectory = "/home/clement";
   home.stateVersion = "26.05"; # Garder la version d'origine lors de la création
   home.sessionVariables = {
-    EDITOR = "nvim";
     VM_METRICS_URL = "http://localhost:8428";
     VM_LOGS_URL = "http://localhost:9428";
     VM_ALERTMANAGER_URL = "http://localhost:9093";
+    EDITOR = "nvim";
   };
   home.packages = with pkgs; [
     git
