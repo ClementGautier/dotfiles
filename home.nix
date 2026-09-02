@@ -28,6 +28,7 @@
     kubernetes-helm
     nodejs_26
     kustomize
+    s3cmd
   ];
 
   fonts.fontconfig.enable = true;
