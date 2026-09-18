@@ -1,6 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    inputs.sofka.homeManagerModules.default
+  ];
+
   home.username = "clement";
   home.homeDirectory = "/home/clement";
   home.stateVersion = "26.05"; # Garder la version d'origine lors de la création
@@ -22,7 +26,6 @@
     herdr
     opencode
     nerd-fonts.hack
-    k9s
     kubectl
     fluxcd
     kubernetes-helm
@@ -110,6 +113,10 @@
       };
       cmd_duration.format = "[$duration]($style) ";
     };
+  };
+
+  programs.sofka = {
+    enable = true;
   };
 
   home.file.".config/wezterm".source =
