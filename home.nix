@@ -14,6 +14,11 @@
     VM_ALERTMANAGER_URL = "http://localhost:9093";
     EDITOR = "nvim";
   };
+
+  home.sessionPath = [
+    "/home/clement/.local/bin"
+  ];
+
   home.packages = with pkgs; [
     git
     gh
@@ -24,7 +29,6 @@
     lazygit
     neovim
     herdr
-    opencode
     nerd-fonts.hack
     kubectl
     fluxcd
